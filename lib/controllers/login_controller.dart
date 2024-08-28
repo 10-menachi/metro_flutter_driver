@@ -1,9 +1,11 @@
 import 'dart:developer';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:metroberry/screens/signup_screen.dart';
 import 'package:metroberry/screens/verify_otp_screen.dart';
+import 'package:metroberry/utils/firebase.dart';
 
 class LoginController extends GetxController {
   TextEditingController countryCodeController =
@@ -32,24 +34,8 @@ class LoginController extends GetxController {
 
   Future<void> signInWithGoogle() async {
     try {
-      print("Signing in with Google...");
-      await Future.delayed(Duration(seconds: 2));
-      print("Signed in with Google!");
-
-      final user = {
-        'uid': 'google-user-id',
-        'email': 'google-user@example.com',
-        'displayName': 'Google User',
-        'photoURL': 'https://example.com/photo.jpg'
-      };
-
-      if (true) {
-        // Simulate new user
-        print("New user: ${user['email']}");
-        Get.to(() => const SignupScreen(), arguments: {
-          "userModel": user,
-        });
-      }
+      UserCredential credential = await googleAuth();
+      print('CREDENTIAL: $credential');
     } catch (e) {
       print("Error signing in with Google: $e");
     }

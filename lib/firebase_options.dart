@@ -63,9 +63,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '516978414394',
     projectId: 'metroberrytaxi',
     storageBucket: 'metroberrytaxi.appspot.com',
-    androidClientId: '516978414394-qu56goc013h5kmpbojt42475no3nbrno.apps.googleusercontent.com',
-    iosClientId: '516978414394-1mavveitpvv9s1jgkm8vp2uo7m44d2rq.apps.googleusercontent.com',
-    iosBundleId: 'com.example.metroberry',
+    androidClientId:
+        '516978414394-qu56goc013h5kmpbojt42475no3nbrno.apps.googleusercontent.com',
+    iosClientId:
+        '516978414394-1mavveitpvv9s1jgkm8vp2uo7m44d2rq.apps.googleusercontent.com',
+    iosBundleId: 'com.driver.app',
   );
-
 }
