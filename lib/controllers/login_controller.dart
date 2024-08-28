@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:metroberry/screens/signup_screen.dart';
 import 'package:metroberry/screens/verify_otp_screen.dart';
 import 'package:metroberry/utils/firebase.dart';
+import 'package:metroberry/widgets/show_toast_dialog.dart';
 
 class LoginController extends GetxController {
   TextEditingController countryCodeController =
@@ -36,8 +37,30 @@ class LoginController extends GetxController {
     try {
       UserCredential credential = await googleAuth();
       print('CREDENTIAL: $credential');
+
+      // Assume credential contains user information you need
+      User? user = credential.user;
+
+      if (user != null) {
+        // Prepare user data for the signup view
+        Map<String, dynamic> userData = {
+          'loginType':
+              'google', // or another type depending on your app's logic
+          'email': user.email,
+          'fullName': user.displayName,
+          'phoneNumber': user.phoneNumber,
+          'countryCode': '', // If applicable, set default or empty
+        };
+
+        // Redirect to SignupView with user data
+        Get.to(() => const SignupScreen(), arguments: userData);
+      } else {
+        ShowToastDialog.showToast("User data is missing.");
+      }
     } catch (e) {
       print("Error signing in with Google: $e");
+      ShowToastDialog.showToast(
+          "Failed to sign in with Google. Please try again.");
     }
   }
 
