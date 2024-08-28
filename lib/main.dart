@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: const Locale('en', 'US'),
+      supportedLocales: const [
+        Locale('en', 'US'),
+      ],
       debugShowCheckedModeBanner: false,
       title: 'MetroBerry',
       theme: ThemeData(
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreenView(),
-        '/get-started': (context) => const GetStartedScreen(),
+        '/get-started': (context) => const GetStarted(),
       },
     );
   }
