@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:metroberry/screens/get_started.dart';
 import 'package:metroberry/screens/splash_screen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.amber,
         textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1),
       ),
+      builder: EasyLoading.init(),
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreenView(),
