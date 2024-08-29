@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
+import 'package:metroberry/screens/signup_screen.dart';
 import 'package:metroberry/widgets/show_toast_dialog.dart';
 
 class VerifyOtpController extends GetxController {
@@ -34,14 +36,27 @@ class VerifyOtpController extends GetxController {
     update();
   }
 
-  Future<bool> sendOTP() async {
-    ShowToastDialog.showLoader("please_wait".tr);
-    // Simulating network request and response
-    await Future.delayed(const Duration(seconds: 2)); // Simulate network delay
-    print("Simulating OTP sent to ${countryCode.value + phoneNumber.value}");
-    verificationId.value = "simulated_verification_id";
-    resendToken.value = 123456; // Simulated resend token
-    ShowToastDialog.closeLoader();
-    return true;
+  Future<void> sendOTP() async {
+    if (otpCode.value.length == 6) {
+      try {
+        await FirebaseAuth.instance
+            .signInWithCredential(PhoneAuthProvider.credential(
+                verificationId: verificationId.value, smsCode: otpCode.value))
+            .then((value) {
+          if (value.user != null) {
+            ShowToastDialog.showToast("otp_verified".tr);
+            Get.to(() => const SignupScreen(), arguments: {
+              'countryCode': countryCode.value,
+              'phoneNumber': phoneNumber.value,
+              'loginType': 'phone',
+            });
+          }
+        });
+      } catch (e) {
+        ShowToastDialog.showToast(e.toString());
+      }
+    } else {
+      ShowToastDialog.showToast("otp_code_length_error".tr);
+    }
   }
 }

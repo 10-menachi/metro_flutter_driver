@@ -84,7 +84,8 @@ class LoginScreen extends StatelessWidget {
                                 controller.countryCodeController,
                             isEnable: true,
                             onChanged: (value) {
-                              // Handle country code change if necessary
+                              controller.countryCodeController.text =
+                                  value.dialCode!;
                             },
                           ),
                         ),
