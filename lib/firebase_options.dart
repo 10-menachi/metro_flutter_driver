@@ -59,14 +59,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyC8kY_B6vSjrY0mFWgDxlmZKs00oUvpi0Q',
-    appId: '1:516978414394:ios:7c24c2db74a831eb05b603',
+    appId: '1:516978414394:ios:0f3772da246bc39b05b603',
     messagingSenderId: '516978414394',
     projectId: 'metroberrytaxi',
     storageBucket: 'metroberrytaxi.appspot.com',
-    androidClientId:
-        '516978414394-qu56goc013h5kmpbojt42475no3nbrno.apps.googleusercontent.com',
-    iosClientId:
-        '516978414394-1mavveitpvv9s1jgkm8vp2uo7m44d2rq.apps.googleusercontent.com',
+    androidClientId: '516978414394-qu56goc013h5kmpbojt42475no3nbrno.apps.googleusercontent.com',
+    iosClientId: '516978414394-ln5mgtfupp7afoj4sfcjpov66mka389v.apps.googleusercontent.com',
     iosBundleId: 'com.driver.app',
   );
+
 }

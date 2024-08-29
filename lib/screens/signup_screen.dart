@@ -15,19 +15,16 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Retrieve arguments
     final arguments = Get.arguments as Map<String, dynamic>?;
 
-    // Initialize the controller
     final SignupController controller = Get.put(SignupController());
 
-    // Set initial values if available
     if (arguments != null) {
       controller.nameController.text = arguments['fullName'] ?? '';
       controller.emailController.text = arguments['email'] ?? '';
       controller.phoneNumberController.text = arguments['phoneNumber'] ?? '';
       controller.countryCodeController.text = arguments['countryCode'] ?? '';
-      controller.loginType.value = arguments['loginType'] ?? '';
+      controller.loginType.value = arguments['loginType'] ?? 'phone';
     }
 
     return Scaffold(
@@ -108,41 +105,6 @@ class SignupScreen extends StatelessWidget {
                     controller: controller.phoneNumberController,
                     isEnable: controller.loginType.value != "phone",
                   ),
-                  // Column(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //   crossAxisAlignment: CrossAxisAlignment.start,
-                  //   children: [
-                  //     CountryCodeSelectorView(
-                  //       countryCodeController: controller.countryCodeController,
-                  //       isEnable: controller.loginType.value != Constant.phoneLoginType,
-                  //       onChanged: (value) {
-                  //         controller.countryCodeController.text = value.dialCode.toString();
-                  //       },
-                  //     ),
-                  //     Container(
-                  //       transform: Matrix4.translationValues(0.0, -05.0, 0.0),
-                  //       child: TextFormField(
-                  //         cursorColor: Colors.black,
-                  //         keyboardType: TextInputType.number,
-                  //         controller: controller.phoneNumberController,
-                  //         enabled: controller.loginType.value != Constant.phoneLoginType,
-                  //         inputFormatters: <TextInputFormatter>[
-                  //           FilteringTextInputFormatter.allow(RegExp("[0-9]")),
-                  //         ],
-                  //         style: GoogleFonts.inter(fontSize: 14, color: themeChange.isDarkTheme() ? AppThemData.white : AppThemData.grey950, fontWeight: FontWeight.w400),
-                  //         decoration: InputDecoration(
-                  //           border: const UnderlineInputBorder(borderSide: BorderSide(color: AppThemData.grey500, width: 1)),
-                  //           focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppThemData.grey500, width: 1)),
-                  //           enabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppThemData.grey500, width: 1)),
-                  //           errorBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppThemData.grey500, width: 1)),
-                  //           disabledBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppThemData.grey500, width: 1)),
-                  //           hintText: "Enter your Phone Number".tr,
-                  //           hintStyle: GoogleFonts.inter(fontSize: 14, color: AppThemData.grey500, fontWeight: FontWeight.w400),
-                  //         ),
-                  //       ),
-                  //     )
-                  //   ],
-                  // ),
                   const SizedBox(height: 20),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -168,7 +130,6 @@ class SignupScreen extends StatelessWidget {
                           activeColor: const Color(0xFF3ED845),
                           onChanged: (value) {
                             controller.selectedGender.value = value ?? 1;
-                            // _radioVal = 'male';
                           },
                         ),
                         InkWell(
@@ -191,7 +152,6 @@ class SignupScreen extends StatelessWidget {
                           activeColor: const Color(0xFF3ED845),
                           onChanged: (value) {
                             controller.selectedGender.value = value ?? 2;
-                            // _radioVal = 'female';
                           },
                         ),
                         InkWell(

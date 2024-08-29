@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:metroberry/screens/signup_screen.dart';
-import 'package:metroberry/screens/verify_otp_screen.dart';
 import 'package:metroberry/utils/firebase.dart';
 import 'package:metroberry/widgets/show_toast_dialog.dart';
 
@@ -19,14 +18,7 @@ class LoginController extends GetxController {
 
   sendCode() async {
     try {
-      print("Sending code...");
-      await Future.delayed(const Duration(seconds: 2));
-      print("Code sent successfully!");
-
-      Get.to(() => const VerifyOtpScreen(), arguments: {
-        "countryCode": countryCodeController.value.text,
-        "phoneNumber": phoneNumberController.value.text,
-      });
+      otpAuth(phoneNumberController.text, countryCodeController.text);
     } catch (e) {
       log(e.toString());
       print("Error sending code: $e");
@@ -36,23 +28,16 @@ class LoginController extends GetxController {
   Future<void> signInWithGoogle() async {
     try {
       UserCredential credential = await googleAuth();
-      print('CREDENTIAL: $credential');
-
-      // Assume credential contains user information you need
       User? user = credential.user;
 
       if (user != null) {
-        // Prepare user data for the signup view
         Map<String, dynamic> userData = {
-          'loginType':
-              'google', // or another type depending on your app's logic
+          'loginType': 'google',
           'email': user.email,
           'fullName': user.displayName,
           'phoneNumber': user.phoneNumber,
-          'countryCode': '', // If applicable, set default or empty
+          'countryCode': '',
         };
-
-        // Redirect to SignupView with user data
         Get.to(() => const SignupScreen(), arguments: userData);
       } else {
         ShowToastDialog.showToast("User data is missing.");

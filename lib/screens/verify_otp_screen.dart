@@ -2,11 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:metroberry/screens/signup_screen.dart';
+import 'package:metroberry/controllers/verify_otp_controller.dart';
 import 'package:otp_text_field/otp_text_field.dart';
 import 'package:otp_text_field/style.dart';
-
-import '../controllers/verify_otp_controller.dart';
 
 class VerifyOtpScreen extends StatelessWidget {
   const VerifyOtpScreen({super.key});
@@ -99,15 +97,7 @@ class VerifyOtpScreen extends StatelessWidget {
                           backgroundColor: Colors.blue, // Button text color
                         ),
                         onPressed: () async {
-                          print("Verify button pressed");
-                          bool result = await controller.sendOTP();
-                          if (result) {
-                            print("OTP sent successfully");
-                            // Redirect to SignupScreen after successful OTP process
-                            Get.to(() => const SignupScreen());
-                          } else {
-                            print("Failed to send OTP");
-                          }
+                          await controller.sendOTP();
                         },
                         child: const Text("Verify OTP"),
                       ),

@@ -1977,13 +1977,9 @@ String? validateMobile(String? value, String? countryCode) {
     ),
   ];
 
-  final Country? selectedCountry = countries.firstWhere(
+  final Country selectedCountry = countries.firstWhere(
     (element) => element.dialCode == countryCode,
   );
-
-  if (selectedCountry == null) {
-    return 'Invalid country code';
-  }
 
   if (value.length < selectedCountry.minLength ||
       value.length > selectedCountry.maxLength) {

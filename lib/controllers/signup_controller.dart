@@ -44,7 +44,7 @@ class SignupController extends GetxController {
     print('Gender: ${selectedGender.value == 1 ? "Male" : "Female"}');
 
     // Simulate asynchronous behavior
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
 
     print('Account creation process simulated.');
 
