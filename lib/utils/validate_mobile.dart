@@ -1981,8 +1981,7 @@ String? validateMobile(String? value, String? countryCode) {
     (element) => element.dialCode == countryCode,
   );
 
-  if (value.length < selectedCountry.minLength ||
-      value.length > selectedCountry.maxLength) {
+  if (value.length < selectedCountry.minLength || value.length > selectedCountry.maxLength) {
     return 'Please enter a valid mobile number';
   }
 
