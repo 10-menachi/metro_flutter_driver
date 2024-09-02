@@ -59,7 +59,7 @@ class MyWalletController extends GetxController {
         if (paymentModel.value.strip!.isActive == true) {
           Stripe.publishableKey =
               paymentModel.value.strip!.clientPublishableKey.toString();
-          Stripe.merchantIdentifier = 'MyTaxi';
+          Stripe.merchantIdentifier = 'MetroBerry';
           Stripe.instance.applySettings();
         }
         if (paymentModel.value.paypal!.isActive == true) {
@@ -158,7 +158,7 @@ class MyWalletController extends GetxController {
                     primary: AppThemData.primary500,
                   ),
                 ),
-                merchantDisplayName: 'MyTaxi'));
+                merchantDisplayName: 'MetroBerry'));
         displayStripePaymentSheet(amount: amount);
       }
     } catch (e, s) {
@@ -221,7 +221,7 @@ class MyWalletController extends GetxController {
         paymentModel.value.paypal!.isSandbox == true ? true : false;
 
     await _flutterPaypalNativePlugin.init(
-      returnUrl: "com.mytaxi.customer://paypalpay",
+      returnUrl: "com.MetroBerry.customer://paypalpay",
       clientID: paymentModel.value.paypal!.paypalClient.toString(),
       payPalEnvironment: paymentModel.value.paypal!.isSandbox == true
           ? FPayPalEnvironment.sandbox

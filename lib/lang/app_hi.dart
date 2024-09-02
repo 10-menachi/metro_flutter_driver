@@ -1,15 +1,18 @@
 const Map<String, String> hiIN = {
   'please_wait': "कृपया प्रतीक्षा करें",
   "Do you want to start this Ride?": "क्या आप इस सवारी को शुरू करना चाहते हैं?",
-  "Ask the customer for an OTP so that you can start this ride": "इस सवारी को शुरू करने के लिए ग्राहक से OTP मांगें",
+  "Ask the customer for an OTP so that you can start this ride":
+      "इस सवारी को शुरू करने के लिए ग्राहक से OTP मांगें",
   "Cancel": "रद्द करें",
   "Ask for OTP": "OTP मांगें",
   "Ride Detail": "बुकिंग विवरण",
   "Pickup": "पिकअप",
   "Complete Ride": "सवारी पूरी करें",
-  "Payment of this ride is Remaining From Customer": "इस सवारी का भुगतान ग्राहक से शेष है",
+  "Payment of this ride is Remaining From Customer":
+      "इस सवारी का भुगतान ग्राहक से शेष है",
   "Confirm Cash Payment": "नकद भुगतान की पुष्टि करें",
-  "Are you sure you want complete the  ride with a cash payment?": "क्या आप नकद भुगतान के साथ सवारी पूरी करना चाहते हैं?",
+  "Are you sure you want complete the  ride with a cash payment?":
+      "क्या आप नकद भुगतान के साथ सवारी पूरी करना चाहते हैं?",
   "Complete": "पूरी करें",
   "Track Ride": "सवारी ट्रैक करें",
   "Ride Status": "सवारी की स्थिति",
@@ -38,7 +41,7 @@ const Map<String, String> hiIN = {
   "Please Select": "कृपया चयन करें",
   "Camera": "कैमरा",
   "Gallery": "गैलरी",
-  "MyTaxi": "मेरीटैक्सी",
+  "MetroBerry": "मेरीटैक्सी",
   "Total Earnings": "कुल कमाई",
   "Total Rides": "कुल सवारी",
   "New Ride": "नई सवारी",
@@ -50,15 +53,15 @@ const Map<String, String> hiIN = {
   "Go Online": "ऑनलाइन जाएं",
   "Customer Reviews": "ग्राहक समीक्षा",
   "View all": "सभी देखें",
-  "Welcome to MyTaxi": "मेरीटैक्सी में आपका स्वागत है",
+  "Welcome to MetroBerry": "मेरीटैक्सी में आपका स्वागत है",
   "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.":
       "स्विफ्ट और सुविधाजनक सवारी के लिए आपका विश्वसनीय साथी। अपनी उंगलियों पर परेशानी मुक्त परिवहन का अनुभव करें।",
   "Fast and Reliable": "तेज और विश्वसनीय",
-  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
+  "MetroBerry ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
       "मेरीटैक्सी समय पर और विश्वसनीय सवारी सुनिश्चित करती है, आपको तेजी और कुशलता से आपके गंतव्य तक पहुंचाती है।",
   "Skip": "छोड़ें",
   "Seamless User Experience": "सहज उपयोगकर्ता अनुभव",
-  "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.":
+  "Enjoy a user-friendly interface, easy bookings, and secure payments with MetroBerry. Your journey, your way.":
       "मेरीटैक्सी के साथ उपयोगकर्ता-अनुकूल इंटरफ़ेस, आसान बुकिंग और सुरक्षित भुगतान का आनंद लें। आपकी यात्रा, आपके तरीके।",
   "Get Started": "शुरू करें",
   "Language": "भाषा",
@@ -99,13 +102,16 @@ const Map<String, String> hiIN = {
   "Allow Access": "पहुंच की अनुमति दें",
   "Reasons for Canceling Ride": "सवारी रद्द करने के कारण",
   "Continue": "जारी रखें",
-  "Your ride is successfully cancelled.": "आपकी सवारी सफलतापूर्वक रद्द कर दी गई है।",
-  "We hope to serve you better next time.": "हमें उम्मीद है कि अगली बार हम आपको बेहतर सेवा दे सकें।",
+  "Your ride is successfully cancelled.":
+      "आपकी सवारी सफलतापूर्वक रद्द कर दी गई है।",
+  "We hope to serve you better next time.":
+      "हमें उम्मीद है कि अगली बार हम आपको बेहतर सेवा दे सकें।",
   "Back to Home": "होम पर वापस जाएं",
   "Something went wrong!": "कुछ गलत हो गया!",
   "Type here...": "यहाँ टाइप करें...",
   "Create Account": "खाता बनाएं",
-  "Create an account to start ride rides.": "सवारी बुक करना शुरू करने के लिए एक खाता बनाएं।",
+  "Create an account to start ride rides.":
+      "सवारी बुक करना शुरू करने के लिए एक खाता बनाएं।",
   "Enter Full Name": "पूरा नाम दर्ज करें",
   "Full Name": "पूरा नाम",
   "Email Address": "ईमेल पता",
@@ -126,26 +132,31 @@ const Map<String, String> hiIN = {
   "Front Side": "सामने का हिस्सा",
   "Browse": "ब्राउज़ करें",
   "Back Side": "पीछे का हिस्सा",
-  "Upload clear pictures of both sides of": "दोनों पक्षों की स्पष्ट तस्वीरें अपलोड करें",
-  "The uploaded image should be in .jpg, .png, or .pdf format.": "अपलोड की गई छवि .jpg, .png, या .pdf प्रारूप में होनी चाहिए।",
+  "Upload clear pictures of both sides of":
+      "दोनों पक्षों की स्पष्ट तस्वीरें अपलोड करें",
+  "The uploaded image should be in .jpg, .png, or .pdf format.":
+      "अपलोड की गई छवि .jpg, .png, या .pdf प्रारूप में होनी चाहिए।",
   "Date of Birth": "जन्म तिथि",
   "Enter Date of Birth": "जन्म तिथि दर्ज करें",
   "camera": "कैमरा",
   "gallery": "गैलरी",
   "Verify your details": "अपनी जानकारी सत्यापित करें",
   "Check Status": "स्थिति जांचें",
-  "User disabled by administrator, Please contact to admin": "व्यवस्थापक द्वारा उपयोगकर्ता अक्षम किया गया है, कृपया व्यवस्थापक से संपर्क करें",
+  "User disabled by administrator, Please contact to admin":
+      "व्यवस्थापक द्वारा उपयोगकर्ता अक्षम किया गया है, कृपया व्यवस्थापक से संपर्क करें",
   "Upload Your Documents": "अपने दस्तावेज़ अपलोड करें",
-  "Securely upload required documents for identity verification and account authentication": "पहचान सत्यापन और खाता प्रमाणीकरण के लिए आवश्यक दस्तावेज़ सुरक्षित रूप से अपलोड करें",
+  "Securely upload required documents for identity verification and account authentication":
+      "पहचान सत्यापन और खाता प्रमाणीकरण के लिए आवश्यक दस्तावेज़ सुरक्षित रूप से अपलोड करें",
   "Add Your Vehicle Details": "अपने वाहन का विवरण जोड़ें",
   "Verified": "सत्यापित",
   "Not Verified": "सत्यापित नहीं",
   "Verify Your Phone Number": "अपना फोन नंबर सत्यापित करें",
-  "Enter  6-digit code sent to your mobile number to complete verification.": "सत्यापन पूरा करने के लिए अपने मोबाइल नंबर पर भेजा गया 6-अंकीय कोड दर्ज करें।",
+  "Enter  6-digit code sent to your mobile number to complete verification.":
+      "सत्यापन पूरा करने के लिए अपने मोबाइल नंबर पर भेजा गया 6-अंकीय कोड दर्ज करें।",
   "Did’t Receive a code ?": "कोड प्राप्त नहीं हुआ?",
   "Resend Code": "कोड पुनः भेजें",
   "No Rides Found": "कोई सवारी नहीं मिली",
-  "Your ride history is currently empty. Start your journey with MyTaxi by riding your first ride now!":
+  "Your ride history is currently empty. Start your journey with MetroBerry by riding your first ride now!":
       "आपका सवारी इतिहास वर्तमान में खाली है। अभी अपनी पहली सवारी के साथ मेरीटैक्सी के साथ अपनी यात्रा शुरू करें!",
   "Pickup Point": "पिकअप पॉइंट",
   "Dropout Point": "ड्रॉपआउट पॉइंट",
@@ -156,7 +167,8 @@ const Map<String, String> hiIN = {
   "Continue Payment": "भुगतान जारी रखें",
   "Payment": "भुगतान",
   "Services": "सेवाएं",
-  "Failed to update status please try again": "स्थिति अपडेट करने में विफल, कृपया पुनः प्रयास करें",
+  "Failed to update status please try again":
+      "स्थिति अपडेट करने में विफल, कृपया पुनः प्रयास करें",
   "Online": "ऑनलाइन",
   "Document": "दस्तावेज़",
   "Rate Us": "हमें रेट करें",
@@ -169,7 +181,8 @@ const Map<String, String> hiIN = {
   "Terms & Condition": "नियम एवं शर्तें",
   "Privacy & Policy": "गोपनीयता नीति",
   "Cancel Ride": "सवारी रद्द करें",
-  "Are you sure you want cancel this ride?": "क्या आप वाकई इस सवारी को रद्द करना चाहते हैं?",
+  "Are you sure you want cancel this ride?":
+      "क्या आप वाकई इस सवारी को रद्द करना चाहते हैं?",
   "Ride cancelled successfully!": "सवारी सफलतापूर्वक रद्द हो गई!",
   "Your Ride is Rejected": "आपकी सवारी अस्वीकृत हो गई है",
   "Accept": "स्वीकार करें",

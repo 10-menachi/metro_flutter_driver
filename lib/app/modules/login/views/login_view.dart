@@ -55,9 +55,11 @@ class LoginView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 32),
                         child: Center(
-                            child: SvgPicture.asset(themeChange.isDarkTheme()
-                                ? "assets/icon/splash_logo.svg"
-                                : "assets/icon/logo_black.svg")),
+                          child: Image.asset(
+                            "assets/images/login_logo.png",
+                            width: 225,
+                          ),
+                        ),
                       ),
                       Text(
                         "Login".tr,
@@ -250,7 +252,7 @@ class LoginView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                SvgPicture.asset("assets/icon/ic_google.svg",
+                                SvgPicture.asset("assets/icons/ic_google.svg",
                                     height: 24, width: 24),
                                 const SizedBox(width: 12),
                                 Text(

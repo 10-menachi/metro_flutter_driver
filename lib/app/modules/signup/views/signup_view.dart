@@ -53,10 +53,11 @@ class SignupView extends StatelessWidget {
                             padding: EdgeInsets.only(
                                 top: Responsive.height(5, context), bottom: 32),
                             child: Center(
-                                child: SvgPicture.asset(
-                                    themeChange.isDarkTheme()
-                                        ? "assets/icon/splash_logo.svg"
-                                        : "assets/icon/logo_black.svg")),
+                              child: Image.asset(
+                                width: 225,
+                                "assets/images/login_logo.png",
+                              ),
+                            ),
                           ),
                           Text(
                             "Create Account".tr,

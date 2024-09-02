@@ -40,7 +40,7 @@ class Constant {
   static const String profileConstant =
       "https://firebasestorage.googleapis.com/v0/b/gocab-a8627.appspot.com/o/constant_assets%2F59.png?alt=media&token=a0b1aebd-9c01-45f6-9569-240c4bc08e23";
   static const String placeHolder =
-      "https://firebasestorage.googleapis.com/v0/b/mytaxi-a8627.appspot.com/o/constant_assets%2Fno-image.png?alt=media&token=e3dc71ac-b600-45aa-8161-5eac1f58d68c";
+      "https://firebasestorage.googleapis.com/v0/b/MetroBerry-a8627.appspot.com/o/constant_assets%2Fno-image.png?alt=media&token=e3dc71ac-b600-45aa-8161-5eac1f58d68c";
   static String appName = '';
   static String? appColor;
   static DriverUserModel? userModel;

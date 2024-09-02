@@ -17,13 +17,13 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    name: "MyTaxi".tr,
+    name: "MetroBerry".tr,
     options: DefaultFirebaseOptions.currentPlatform,
   );
   configLoading();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'MyTaxi',
+    title: 'MetroBerry',
     theme: ThemeData(
       primarySwatch: Colors.amber,
       textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1),
@@ -100,7 +100,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       child: Consumer<DarkThemeProvider>(
         builder: (context, value, child) {
           return GetMaterialApp(
-              title: 'MyTaxi'.tr,
+              title: 'MetroBerry'.tr,
               debugShowCheckedModeBanner: false,
               theme: Styles.themeData(
                   themeChangeProvider.darkTheme == 0

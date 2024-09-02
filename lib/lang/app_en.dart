@@ -1,16 +1,19 @@
 const Map<String, String> enUS = {
   'please_wait': "Please wait",
-  "Upload all required documents.":"Upload all required documents.",
+  "Upload all required documents.": "Upload all required documents.",
   "Do you want to start this Ride?": "Do you want to start this Ride?",
-  "Ask the customer for an OTP so that you can start this ride": "Ask the customer for an OTP so that you can start this ride",
+  "Ask the customer for an OTP so that you can start this ride":
+      "Ask the customer for an OTP so that you can start this ride",
   "Cancel": "Cancel",
   "Ask for OTP": "Ask for OTP",
   "Ride Detail": "Ride Detail",
   "Pickup": "Pickup",
   "Complete Ride": "Complete Ride",
-  "Payment of this ride is Remaining From Customer": "Payment of this ride is Remaining From Customer",
+  "Payment of this ride is Remaining From Customer":
+      "Payment of this ride is Remaining From Customer",
   "Confirm Cash Payment": "Confirm Cash Payment",
-  "Are you sure you want complete the  ride with a cash payment?": "Are you sure you want complete the  ride with a cash payment?",
+  "Are you sure you want complete the  ride with a cash payment?":
+      "Are you sure you want complete the  ride with a cash payment?",
   "Complete": "Complete",
   "Track Ride": "Track Ride",
   "Ride Status": "Ride Status",
@@ -38,7 +41,7 @@ const Map<String, String> enUS = {
   "Please Select": "Please Select",
   "Camera": "Camera",
   "Gallery": "Gallery",
-  "MyTaxi": "MyTaxi",
+  "MetroBerry": "MetroBerry",
   "verify_OTP": "Verify OTP",
   "Total Earnings": "Total Earnings",
   "Total Rides": "Total Rides",
@@ -50,16 +53,16 @@ const Map<String, String> enUS = {
   "Go Online": "Go Online",
   "Customer Reviews": "Customer Reviews",
   "View all": "View all",
-  "Welcome to MyTaxi": "Welcome to MyTaxi",
+  "Welcome to MetroBerry": "Welcome to MetroBerry",
   "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.":
       "Your reliable partner for swift and convenient rides. Experience hassle-free transportation at your fingertips.",
   "Fast and Reliable": "Fast and Reliable",
-  "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
-      "MyTaxi ensures prompt and reliable rides, getting you to your destination with speed and efficiency.",
+  "MetroBerry ensures prompt and reliable rides, getting you to your destination with speed and efficiency.":
+      "MetroBerry ensures prompt and reliable rides, getting you to your destination with speed and efficiency.",
   "Skip": "Skip",
   "Seamless User Experience": "Seamless User Experience",
-  "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.":
-      "Enjoy a user-friendly interface, easy bookings, and secure payments with MyTaxi. Your journey, your way.",
+  "Enjoy a user-friendly interface, easy bookings, and secure payments with MetroBerry. Your journey, your way.":
+      "Enjoy a user-friendly interface, easy bookings, and secure payments with MetroBerry. Your journey, your way.",
   "Get Started": "Get Started",
   "Language": "Language",
   "Login": "Login",
@@ -99,8 +102,10 @@ const Map<String, String> enUS = {
   "Allow Access": "Allow Access",
   "Reasons for Canceling Ride": "Reasons for Canceling Ride",
   "Continue": "Continue",
-  "Your ride is successfully cancelled.": "Your ride is successfully cancelled.",
-  "We hope to serve you better next time.": "We hope to serve you better next time.",
+  "Your ride is successfully cancelled.":
+      "Your ride is successfully cancelled.",
+  "We hope to serve you better next time.":
+      "We hope to serve you better next time.",
   "Back to Home": "Back to Home",
   "Home": "Home",
   "Something went wrong!": "Something went wrong!",
@@ -127,15 +132,18 @@ const Map<String, String> enUS = {
   "Front Side": "Front Side",
   "Browse": "Browse",
   "Back Side": "Back Side",
-  "Upload clear pictures of both sides of": "Upload clear pictures of both sides of",
-  "The uploaded image should be in .jpg, .png, or .pdf format.": "The uploaded image should be in .jpg, .png, or .pdf format.",
+  "Upload clear pictures of both sides of":
+      "Upload clear pictures of both sides of",
+  "The uploaded image should be in .jpg, .png, or .pdf format.":
+      "The uploaded image should be in .jpg, .png, or .pdf format.",
   "Date of Birth": "Date of Birth",
   "Enter Date of Birth": "Enter Date of Birth",
   "camera": "camera",
   "gallery": "gallery",
   "Verify your details": "Verify your details",
   "Check Status": "Check Status",
-  "User disabled by administrator, Please contact to admin": "User disabled by administrator, Please contact to admin",
+  "User disabled by administrator, Please contact to admin":
+      "User disabled by administrator, Please contact to admin",
   "Upload Your Documents": "Upload Your Documents",
   "Securely upload required documents for identity verification and account authentication":
       "Securely upload required documents for identity verification and account authentication",
@@ -143,12 +151,13 @@ const Map<String, String> enUS = {
   "Verified": "Verified",
   "Not Verified": "Not Verified",
   "Verify Your Phone Number": "Verify Your Phone Number",
-  "Enter  6-digit code sent to your mobile number to complete verification.": "Enter  6-digit code sent to your mobile number to complete verification.",
+  "Enter  6-digit code sent to your mobile number to complete verification.":
+      "Enter  6-digit code sent to your mobile number to complete verification.",
   "Did’t Receive a code ?": "Did’t Receive a code ?",
   "Resend Code": "Resend Code",
   "No Rides Found": "No Rides Found",
-  "Your ride history is currently empty. Start your journey with MyTaxi by riding your first ride now!":
-      "Your ride history is currently empty. Start your journey with MyTaxi by riding your first ride now!",
+  "Your ride history is currently empty. Start your journey with MetroBerry by riding your first ride now!":
+      "Your ride history is currently empty. Start your journey with MetroBerry by riding your first ride now!",
   "Pickup Point": "Pickup Point",
   "Dropout Point": "Dropout Point",
   "Marcado Pago Payment": "Marcado Pago Payment",
@@ -158,7 +167,8 @@ const Map<String, String> enUS = {
   "Continue Payment": "Continue Payment",
   "Payment": "Payment",
   "Services": "Services",
-  "Failed to update status please try again": "Failed to update status please try again",
+  "Failed to update status please try again":
+      "Failed to update status please try again",
   "Online": "Online",
   "Document": "Document",
   "Rate Us": "Rate Us",
@@ -171,7 +181,8 @@ const Map<String, String> enUS = {
   "Terms & Condition": "Terms & Condition",
   "Privacy & Policy": "Privacy & Policy",
   "Cancel Ride": "Cancel Ride",
-  "Are you sure you want cancel this ride?": "Are you sure you want cancel this ride?",
+  "Are you sure you want cancel this ride?":
+      "Are you sure you want cancel this ride?",
   "Ride cancelled successfully!": "Ride cancelled successfully!",
   "Your Ride is Rejected": "Your Ride is Rejected",
   "Accept": "Accept",
