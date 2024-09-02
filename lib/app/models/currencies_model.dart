@@ -10,16 +10,28 @@ class CurrencyModel {
   int? decimalDigits;
   String? id;
 
-  CurrencyModel({this.createdAt, this.symbol, this.code, this.active, this.symbolAtRight, this.name, this.decimalDigits, this.id});
+  CurrencyModel(
+      {this.createdAt,
+      this.symbol,
+      this.code,
+      this.active,
+      this.symbolAtRight,
+      this.name,
+      this.decimalDigits,
+      this.id});
 
   CurrencyModel.fromJson(Map<String, dynamic> json) {
-    createdAt = json['createdAt'];
+    print("CREATED AT: $json['createdAt']");
+    createdAt = Timestamp(
+        json['createdAt']['_seconds'], json['createdAt']['_nanoseconds']);
     symbol = json['symbol'];
     code = json['code'];
     active = json['active'];
     symbolAtRight = json['symbolAtRight'];
     name = json['name'];
-    decimalDigits = json['decimalDigits'] != null ? int.parse(json['decimalDigits'].toString()) : 2;
+    decimalDigits = json['decimalDigits'] != null
+        ? int.parse(json['decimalDigits'].toString())
+        : 2;
     id = json['id'];
   }
 

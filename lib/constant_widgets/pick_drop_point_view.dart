@@ -41,8 +41,8 @@ class PickDropPointView extends StatelessWidget {
           contentsAlign: ContentsAlign.basic,
           indicatorBuilder: (context, index) {
             return index == 0
-                ? SvgPicture.asset("assets/icon/ic_pick_up.svg")
-                : SvgPicture.asset("assets/icon/ic_drop_in.svg");
+                ? SvgPicture.asset("assets/icons/ic_pick_up.svg")
+                : SvgPicture.asset("assets/icons/ic_drop_in.svg");
           },
           connectorBuilder: (context, index, connectorType) {
             return DashedLineConnector(

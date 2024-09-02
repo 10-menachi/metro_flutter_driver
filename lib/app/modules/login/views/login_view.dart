@@ -204,7 +204,7 @@ class LoginView extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   SvgPicture.asset(
-                                    "assets/icon/ic_apple.svg",
+                                    "assets/icons/ic_apple.svg",
                                     height: 24,
                                     width: 24,
                                     colorFilter: ColorFilter.mode(

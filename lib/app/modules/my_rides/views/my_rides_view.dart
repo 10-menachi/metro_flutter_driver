@@ -206,7 +206,7 @@ class MyRidesView extends GetView<MyRidesController> {
                                     "Please change your status to online to access all features. When offline, you won't be able to access any functionalities."
                                         .tr,
                                 img: SvgPicture.asset(
-                                  "assets/icon/ic_offline.svg",
+                                  "assets/icons/ic_offline.svg",
                                   height: 58,
                                   width: 58,
                                 ),

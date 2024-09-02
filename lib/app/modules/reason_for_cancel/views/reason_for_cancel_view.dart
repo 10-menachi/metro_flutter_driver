@@ -66,7 +66,7 @@ class ReasonForCancelView extends StatelessWidget {
                               descriptions:
                                   "We hope to serve you better next time.",
                               img: Image.asset(
-                                "assets/icon/ic_green_right.png",
+                                "assets/icons/ic_green_right.png",
                                 height: 58,
                                 width: 58,
                               ),

@@ -90,7 +90,7 @@ class AskForOtpView extends StatelessWidget {
                             ),
                             Center(
                               child: Image.asset(
-                                "assets/icon/gif_ask_otp.gif",
+                                "assets/icons/gif_ask_otp.gif",
                                 height: 76.0,
                                 width: 76.0,
                               ),

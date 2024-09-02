@@ -112,7 +112,7 @@ class DrawerView extends StatelessWidget {
                                       }
                                     },
                                     child: SvgPicture.asset(
-                                        "assets/icon/ic_drawer_edit.svg"))
+                                        "assets/icons/ic_drawer_edit.svg"))
                               ],
                             ),
                           ),
@@ -132,7 +132,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_online.svg",
+                          "assets/icons/ic_online.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -176,7 +176,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_my_rides.svg",
+                          "assets/icons/ic_my_rides.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -206,7 +206,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_my_rides.svg",
+                          "assets/icons/ic_my_rides.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -237,7 +237,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_my_wallet.svg",
+                          "assets/icons/ic_my_wallet.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -268,7 +268,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_my_bank.svg",
+                          "assets/icons/ic_my_bank.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -299,7 +299,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_document_drawer.svg",
+                          "assets/icons/ic_document_drawer.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white
@@ -462,7 +462,7 @@ class DrawerView extends StatelessWidget {
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icon/ic_language.svg",
+                          "assets/icons/ic_language.svg",
                           colorFilter: ColorFilter.mode(
                               themeChange.isDarkTheme()
                                   ? AppThemData.white

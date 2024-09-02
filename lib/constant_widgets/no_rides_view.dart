@@ -21,7 +21,7 @@ class NoRidesView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset("assets/icon/ic_no_rides.svg"),
+          SvgPicture.asset("assets/icons/ic_no_rides.svg"),
           const SizedBox(
             height: 24,
           ),

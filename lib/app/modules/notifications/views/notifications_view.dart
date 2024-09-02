@@ -111,7 +111,7 @@ class NotificationsView extends GetView<NotificationsController> {
                                               child: Row(
                                                 children: [
                                                   SvgPicture.asset(
-                                                      "assets/icon/ic_delete.svg"),
+                                                      "assets/icons/ic_delete.svg"),
                                                   const SizedBox(width: 12),
                                                   Text(
                                                     choice,

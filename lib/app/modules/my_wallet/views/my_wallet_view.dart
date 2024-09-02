@@ -253,7 +253,7 @@ class MyWalletView extends StatelessWidget {
                                                   ),
                                                   child: Center(
                                                     child: SvgPicture.asset(
-                                                      "assets/icon/ic_my_wallet.svg",
+                                                      "assets/icons/ic_my_wallet.svg",
                                                       colorFilter: ColorFilter.mode(
                                                           (walletTransactionModel
                                                                       .isCredit ??
@@ -529,7 +529,7 @@ class MyWalletView extends StatelessWidget {
                                                             child: Center(
                                                               child: SvgPicture
                                                                   .asset(
-                                                                "assets/icon/ic_my_wallet.svg",
+                                                                "assets/icons/ic_my_wallet.svg",
                                                                 colorFilter: ColorFilter.mode(
                                                                     (walletTransactionModel.paymentStatus ==
                                                                             "Complete")

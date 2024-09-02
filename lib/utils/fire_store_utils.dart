@@ -445,10 +445,21 @@ class FireStoreUtils {
         .doc("admin_commission")
         .get()
         .then((value) {
-      AdminCommission adminCommission = AdminCommission.fromJson(value.data()!);
-      if (adminCommission.active == true) {
-        Constant.adminCommission = adminCommission;
+      var data = value.data();
+      if (data != null) {
+        try {
+          AdminCommission adminCommission = AdminCommission.fromJson(data);
+          if (adminCommission.active == true) {
+            Constant.adminCommission = adminCommission;
+          }
+        } catch (e) {
+          print('Error parsing AdminCommission: $e');
+        }
+      } else {
+        print('Error: No data found for admin_commission');
       }
+    }).catchError((error) {
+      print('Error fetching document: $error');
     });
 
     // await fireStore.collection(CollectionName.settings).doc("referral").get().then((value) {
@@ -465,17 +476,25 @@ class FireStoreUtils {
   }
 
   Future<PaymentModel?> getPayment() async {
-    PaymentModel? paymentModel;
-    await fireStore
-        .collection(CollectionName.settings)
-        .doc("payment")
-        .get()
-        .then((value) {
-      paymentModel = PaymentModel.fromJson(value.data()!);
-      Constant.paymentModel = PaymentModel.fromJson(value.data()!);
-    });
-    print("Payment Data : ${json.encode(paymentModel!.toJson().toString())}");
-    return paymentModel;
+    try {
+      var documentSnapshot = await fireStore
+          .collection(CollectionName.settings)
+          .doc("payment")
+          .get();
+      var data = documentSnapshot.data();
+      if (data != null) {
+        PaymentModel paymentModel = PaymentModel.fromJson(data);
+        Constant.paymentModel = paymentModel;
+        print("Payment Data: ${json.encode(paymentModel.toJson())}");
+        return paymentModel;
+      } else {
+        print('Error: No data found for payment');
+        return null;
+      }
+    } catch (e) {
+      print('Error fetching document: $e');
+      return null;
+    }
   }
 
   static Future<List<WalletTransactionModel>?> getWalletTransaction() async {

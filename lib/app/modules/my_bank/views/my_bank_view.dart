@@ -214,7 +214,7 @@ class MyBankView extends GetView<MyBankController> {
                                             height: 14,
                                             width: 14,
                                             child: SvgPicture.asset(
-                                              "assets/icon/ic_three_dot.svg",
+                                              "assets/icons/ic_three_dot.svg",
                                             )),
                                       ),
                                     ),

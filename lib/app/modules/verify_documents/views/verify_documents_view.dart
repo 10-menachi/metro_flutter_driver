@@ -121,7 +121,7 @@ class VerifyDocumentsView extends GetView<VerifyDocumentsController> {
                     ),
                     Center(
                       child: Image.asset(
-                        "assets/icon/gif_verify_details.gif",
+                        "assets/icons/gif_verify_details.gif",
                         height: 76.0,
                         width: 76.0,
                       ),
@@ -171,7 +171,7 @@ class VerifyDocumentsView extends GetView<VerifyDocumentsController> {
                                                 .driverVehicleDetails !=
                                             null
                                         ? SvgPicture.asset(
-                                            "assets/icon/ic_vehicle_details.svg")
+                                            "assets/icons/ic_vehicle_details.svg")
                                         : Icon(
                                             Icons.add,
                                             color: AppThemData.primary500,
@@ -335,9 +335,9 @@ class VerifyDocumentsView extends GetView<VerifyDocumentsController> {
                                       children: [
                                         isUploaded
                                             ? SvgPicture.asset(
-                                                "assets/icon/ic_vehicle_details.svg")
+                                                "assets/icons/ic_vehicle_details.svg")
                                             : SvgPicture.asset(
-                                                "assets/icon/ic_upload_document.svg"),
+                                                "assets/icons/ic_upload_document.svg"),
                                         const SizedBox(width: 18),
                                         Expanded(
                                           child: Column(

@@ -55,7 +55,7 @@ class HomeView extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset("assets/icon/logo_only.svg"),
+                  SvgPicture.asset("assets/icons/logo_only.svg"),
                   const SizedBox(width: 10),
                   Text(
                     'MetroBerry'.tr,
@@ -198,7 +198,7 @@ class HomeView extends GetView<HomeController> {
                                                                 ],
                                                               ),
                                                               SvgPicture.asset(
-                                                                "assets/icon/ic_hand_currency.svg",
+                                                                "assets/icons/ic_hand_currency.svg",
                                                                 width: 52,
                                                                 height: 52,
                                                               )
@@ -454,7 +454,7 @@ class HomeView extends GetView<HomeController> {
                                                                         "Please change your status to online to access all features. When offline, you won't be able to access any functionalities.",
                                                                     img: SvgPicture
                                                                         .asset(
-                                                                      "assets/icon/ic_offline.svg",
+                                                                      "assets/icons/ic_offline.svg",
                                                                       height:
                                                                           58,
                                                                       width: 58,

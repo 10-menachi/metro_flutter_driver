@@ -153,7 +153,7 @@ class _ChatScreenViewState extends State<ChatScreenView> {
                     Constant().launchCall(
                         "${controller.receiverUserModel.value.countryCode}${controller.receiverUserModel.value.phoneNumber}");
                   },
-                  child: SvgPicture.asset("assets/icon/ic_phone.svg")),
+                  child: SvgPicture.asset("assets/icons/ic_phone.svg")),
               const SizedBox(width: 12),
             ],
           ),
@@ -216,7 +216,7 @@ class _ChatScreenViewState extends State<ChatScreenView> {
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(2, 2, 16, 2),
                           child: SvgPicture.asset(
-                            "assets/icon/ic_send.svg",
+                            "assets/icons/ic_send.svg",
                             height: 15,
                             width: 15,
                           ),

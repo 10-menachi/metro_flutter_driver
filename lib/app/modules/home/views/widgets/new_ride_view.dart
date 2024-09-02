@@ -192,7 +192,7 @@ class NewRideView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SvgPicture.asset("assets/icon/ic_multi_person.svg"),
+                          SvgPicture.asset("assets/icons/ic_multi_person.svg"),
                           const SizedBox(width: 6),
                           Text(
                             bookingModel == null
@@ -306,7 +306,7 @@ class NewRideView extends StatelessWidget {
                                   Navigator.pop(context);
                                 },
                                 img: Image.asset(
-                                  "assets/icon/ic_close.png",
+                                  "assets/icons/ic_close.png",
                                   height: 58,
                                   width: 58,
                                 ));
@@ -331,7 +331,7 @@ class NewRideView extends StatelessWidget {
                                 descriptions:
                                     "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride.",
                                 img: Image.asset(
-                                  "assets/icon/ic_green_right.png",
+                                  "assets/icons/ic_green_right.png",
                                   height: 58,
                                   width: 58,
                                 ),

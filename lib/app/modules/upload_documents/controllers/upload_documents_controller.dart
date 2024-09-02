@@ -1,13 +1,10 @@
-// ignore_for_file: unnecessary_overrides
-
 import 'dart:io';
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:metroberry/app/models/documents_model.dart';
 import 'package:metroberry/app/models/driver_user_model.dart';
 import 'package:metroberry/app/models/verify_driver_model.dart';
@@ -47,120 +44,151 @@ class UploadDocumentsController extends GetxController {
     super.onClose();
   }
 
-  setData(bool isUploaded, String id, BuildContext context) {
+  void setData(bool isUploaded, String id, BuildContext context) {
     imageWidgetList.clear();
     VerifyDocumentsController uploadDocumentsController =
         Get.find<VerifyDocumentsController>();
+
     if (isUploaded) {
       int index = uploadDocumentsController
-          .verifyDriverModel.value.verifyDocument!
-          .indexWhere((element) => element.documentId == id);
+              .verifyDriverModel.value.verifyDocument
+              ?.indexWhere((element) => element.documentId == id) ??
+          -1;
+
       if (index != -1) {
-        for (var element in uploadDocumentsController
-            .verifyDriverModel.value.verifyDocument![index].documentImage) {
-          imageList.add(uploadDocumentsController
-              .verifyDriverModel.value.verifyDocument![index].documentImage
-              .indexOf(element));
-          imageWidgetList.add(
-            Center(
-              child: NetworkImageWidget(
-                imageUrl: element.toString(),
-                height: 220,
-                width: Responsive.width(100, context),
-                borderRadius: 12,
-                fit: BoxFit.cover,
+        var document = uploadDocumentsController
+            .verifyDriverModel.value.verifyDocument![index];
+
+        if (document.documentImage.isNotEmpty) {
+          for (var element in document.documentImage) {
+            imageList.add(document.documentImage.indexOf(element));
+            imageWidgetList.add(
+              Center(
+                child: NetworkImageWidget(
+                  imageUrl: element.toString(),
+                  height: 220,
+                  width: Responsive.width(100, context),
+                  borderRadius: 12,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-          );
+            );
+          }
+        } else {
+          ShowToastDialog.showToast("No images available for this document.");
         }
 
-        nameController.text = uploadDocumentsController
-                .verifyDriverModel.value.verifyDocument![index].name ??
-            '';
-        numberController.text = uploadDocumentsController
-                .verifyDriverModel.value.verifyDocument![index].number ??
-            '';
-        dobController.text = uploadDocumentsController
-                .verifyDriverModel.value.verifyDocument![index].dob ??
-            '';
+        nameController.text = document.name ?? '';
+        numberController.text = document.number ?? '';
+        dobController.text = document.dob ?? '';
+      } else {
+        ShowToastDialog.showToast("Document not found.");
       }
+    } else {
+      ShowToastDialog.showToast("Document not uploaded yet.");
     }
   }
 
-  Future<void> pickFile({
-    required ImageSource source,
-    required int index,
-  }) async {
+  Future<void> pickFile(
+      {required ImageSource source, required int index}) async {
     try {
       XFile? image =
           await imagePicker.pickImage(source: source, imageQuality: 60);
       if (image == null) return;
+
       Get.back();
+
       Uint8List? compressedBytes = await FlutterImageCompress.compressWithFile(
         image.path,
         quality: 50,
       );
+
+      if (compressedBytes == null) {
+        ShowToastDialog.showToast("Failed to compress image");
+        return;
+      }
+
       File compressedFile = File(image.path);
-      await compressedFile.writeAsBytes(compressedBytes!);
+      await compressedFile.writeAsBytes(compressedBytes);
+
       List<dynamic> files = verifyDocument.value.documentImage;
       files.removeAt(index);
       files.insert(index, compressedFile.path);
       verifyDocument.value = VerifyDocument(documentImage: files);
-    } on PlatformException {
-      ShowToastDialog.showToast("Failed to pick");
+    } on PlatformException catch (e) {
+      ShowToastDialog.showToast("Failed to pick image: ${e.message}");
+    } catch (e) {
+      ShowToastDialog.showToast("Unexpected error occurred: ${e.toString()}");
     }
   }
 
-  uploadDocument(DocumentsModel document) async {
+  Future<void> uploadDocument(DocumentsModel document) async {
     ShowToastDialog.showLoader("Please wait");
-    if (verifyDocument.value.documentImage.isNotEmpty) {
-      for (int i = 0; i < verifyDocument.value.documentImage.length; i++) {
-        if (verifyDocument.value.documentImage[i].isNotEmpty) {
-          if (Constant.hasValidUrl(
-                  verifyDocument.value.documentImage[i].toString()) ==
-              false) {
-            String image =
-                await Constant.uploadDriverDocumentImageToFireStorage(
-              File(verifyDocument.value.documentImage[i].toString()),
-              "driver_documents/${document.id}/${FireStoreUtils.getCurrentUid()}",
-              verifyDocument.value.documentImage[i].split('/').last,
-            );
-            verifyDocument.value.documentImage.removeAt(i);
-            verifyDocument.value.documentImage.insert(i, image);
+    try {
+      // Access the underlying VerifyDocument object
+      VerifyDocument verifyDoc = verifyDocument.value;
+      if (verifyDoc.documentImage.isNotEmpty) {
+        for (int i = 0; i < verifyDoc.documentImage.length; i++) {
+          if (verifyDoc.documentImage[i].isNotEmpty) {
+            if (Constant.hasValidUrl(verifyDoc.documentImage[i].toString())) {
+              print('HEREEEEEEE');
+              String image =
+                  await Constant.uploadDriverDocumentImageToFireStorage(
+                File(verifyDoc.documentImage[i].toString()),
+                "documents/${document.id}/${FireStoreUtils.getCurrentUid()}",
+                verifyDoc.documentImage[i].split('/').last,
+              );
+              verifyDoc.documentImage[i] = image;
+            }
           }
         }
       }
-    }
-    verifyDocument.value.documentId = document.id;
-    verifyDocument.value.name = nameController.text;
-    verifyDocument.value.number = numberController.text;
-    verifyDocument.value.dob = dobController.text;
-    verifyDocument.value.isVerify = false;
-    VerifyDocumentsController verifyDocumentsController =
-        Get.find<VerifyDocumentsController>();
-    DriverUserModel? userModel = await FireStoreUtils.getDriverUserProfile(
-        FireStoreUtils.getCurrentUid());
-    List<VerifyDocument> verifyDocumentList =
-        verifyDocumentsController.verifyDriverModel.value.verifyDocument ?? [];
-    verifyDocumentList.add(verifyDocument.value);
-    VerifyDriverModel verifyDriverModel = VerifyDriverModel(
-      createAt: Timestamp.now(),
-      driverEmail: userModel!.email ?? '',
-      driverId: userModel.id ?? '',
-      driverName: userModel.fullName ?? '',
-      verifyDocument: verifyDocumentList,
-    );
-    bool isUpdated = await FireStoreUtils.addDocument(verifyDriverModel);
-    ShowToastDialog.closeLoader();
-    if (isUpdated) {
-      ShowToastDialog.showToast(
-          "${document.title} updated, Please wait for verification.");
-      verifyDocumentsController.getData();
-      Get.back();
-    } else {
-      ShowToastDialog.showToast(
-          "Something went wrong, Please try again later.");
-      Get.back();
+
+      verifyDoc.documentId = document.id;
+      verifyDoc.name = nameController.text;
+      verifyDoc.number = numberController.text;
+      verifyDoc.dob = dobController.text;
+      verifyDoc.isVerify = false;
+
+      VerifyDocumentsController verifyDocumentsController =
+          Get.find<VerifyDocumentsController>();
+      DriverUserModel? userModel = await FireStoreUtils.getDriverUserProfile(
+          FireStoreUtils.getCurrentUid());
+
+      if (userModel == null) {
+        ShowToastDialog.showToast("Failed to get user profile");
+        ShowToastDialog.closeLoader();
+        return;
+      }
+
+      List<VerifyDocument> verifyDocumentList =
+          verifyDocumentsController.verifyDriverModel.value.verifyDocument ??
+              [];
+      verifyDocumentList.add(verifyDoc);
+
+      VerifyDriverModel verifyDriverModel = VerifyDriverModel(
+        createAt: Timestamp.now(),
+        driverEmail: userModel.email ?? '',
+        driverId: userModel.id ?? '',
+        driverName: userModel.fullName ?? '',
+        verifyDocument: verifyDocumentList,
+      );
+
+      bool isUpdated = await FireStoreUtils.addDocument(verifyDriverModel);
+
+      if (isUpdated) {
+        ShowToastDialog.showToast(
+            "${document.title} updated, Please wait for verification.");
+        verifyDocumentsController.getData();
+        Get.back();
+      } else {
+        ShowToastDialog.showToast(
+            "Something went wrong, Please try again later.");
+      }
+    } catch (e) {
+      ShowToastDialog.showToast("Error uploading document: ${e.toString()}");
+    } finally {
+      ShowToastDialog.closeLoader();
     }
   }
 }

@@ -6,8 +6,6 @@ import 'package:metroberry/app/models/currencies_model.dart';
 import 'package:metroberry/app/models/driver_user_model.dart';
 import 'package:metroberry/app/models/language_model.dart';
 import 'package:metroberry/constant/constant.dart';
-import 'package:metroberry/extension/hax_color_extension.dart';
-import 'package:metroberry/theme/app_them_data.dart';
 import 'package:metroberry/utils/fire_store_utils.dart';
 import 'package:metroberry/utils/notification_service.dart';
 import 'package:metroberry/utils/preferences.dart';
@@ -46,7 +44,6 @@ class GlobalSettingController extends GetxController {
     });
     await FireStoreUtils().getSettings();
     await FireStoreUtils().getPayment();
-    AppThemData.primary500 = HexColor.fromHex(Constant.appColor.toString());
   }
 
   getVehicleTypeList() async {

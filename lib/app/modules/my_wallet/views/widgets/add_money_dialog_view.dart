@@ -96,7 +96,7 @@ class AddMoneyDialogView extends StatelessWidget {
                               height: 20,
                               width: 20,
                               child: SvgPicture.asset(
-                                "assets/icon/ic_edit.svg",
+                                "assets/icons/ic_edit.svg",
                               )),
                           contentPadding: const EdgeInsets.all(20)),
                     ),

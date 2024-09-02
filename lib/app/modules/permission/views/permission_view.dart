@@ -24,7 +24,7 @@ class PermissionView extends StatelessWidget {
               children: [
                 Center(
                   child: Image.asset(
-                    "assets/icon/gif_location.gif",
+                    "assets/icons/gif_location.gif",
                     height: 120.0,
                     width: 120.0,
                   ),

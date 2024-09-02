@@ -80,7 +80,7 @@ class EditProfileView extends StatelessWidget {
                       //             borderRadius: BorderRadius.circular(200), side: const BorderSide(color: AppThemData.white, width: 3)),
                       //       ),
                       //       child: SvgPicture.asset(
-                      //         "assets/icon/ic_drawer_edit.svg",
+                      //         "assets/icons/ic_drawer_edit.svg",
                       //       ),
                       //     ),
                       //   ],
@@ -350,7 +350,8 @@ class EditProfileView extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: AppThemData.primary500,
                       radius: 18,
-                      child: SvgPicture.asset("assets/icon/ic_drawer_edit.svg"),
+                      child:
+                          SvgPicture.asset("assets/icons/ic_drawer_edit.svg"),
                     ),
                   ))
             ],

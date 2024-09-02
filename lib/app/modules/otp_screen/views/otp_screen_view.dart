@@ -121,7 +121,7 @@ class OtpScreenView extends StatelessWidget {
                                       Navigator.pop(context);
                                     },
                                     img: Image.asset(
-                                      "assets/icon/ic_green_right.png",
+                                      "assets/icons/ic_green_right.png",
                                       height: 58,
                                       width: 58,
                                     ));

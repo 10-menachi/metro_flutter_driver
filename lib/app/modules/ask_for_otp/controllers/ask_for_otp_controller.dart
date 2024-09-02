@@ -156,11 +156,11 @@ class AskForOtpController extends GetxController {
 
   Future<void> addMarkerSetup() async {
     final Uint8List departure = await Constant()
-        .getBytesFromAsset('assets/icon/ic_pick_up_map.png', 100);
+        .getBytesFromAsset('assets/icons/ic_pick_up_map.png', 100);
     final Uint8List destination = await Constant()
-        .getBytesFromAsset('assets/icon/ic_drop_in_map.png', 100);
+        .getBytesFromAsset('assets/icons/ic_drop_in_map.png', 100);
     final Uint8List driver =
-        await Constant().getBytesFromAsset('assets/icon/ic_car.png', 50);
+        await Constant().getBytesFromAsset('assets/icons/ic_car.png', 50);
     departureIcon = BitmapDescriptor.bytes(departure);
     destinationIcon = BitmapDescriptor.bytes(destination);
     driverIcon = BitmapDescriptor.bytes(driver);

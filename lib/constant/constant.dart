@@ -275,9 +275,16 @@ class Constant {
     return true;
   }
 
+  static Future<void> checkIfFileExists(String filePath) async {
+    final file = File(filePath);
+    bool exists = await file.exists();
+    print("Exists: $exists");
+  }
+
   static Future<String> uploadDriverDocumentImageToFireStorage(
       File image, String filePath, String fileName) async {
     print("Path : ${image.absolute.path}");
+    checkIfFileExists(filePath);
     Reference upload =
         FirebaseStorage.instance.ref().child('$filePath/$fileName');
     print("Path : ${upload.fullPath}");

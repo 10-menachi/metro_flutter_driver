@@ -145,7 +145,7 @@ class BookingDetailsView extends StatelessWidget {
                                     Navigator.pop(context);
                                   },
                                   img: Image.asset(
-                                    "assets/icon/ic_close.png",
+                                    "assets/icons/ic_close.png",
                                     height: 58,
                                     width: 58,
                                   ));
@@ -171,7 +171,7 @@ class BookingDetailsView extends StatelessWidget {
                                       "Are you sure you want to accept this ride request? Once confirmed, you will be directed to the next step to proceed with the ride."
                                           .tr,
                                   img: Image.asset(
-                                    "assets/icon/ic_green_right.png",
+                                    "assets/icons/ic_green_right.png",
                                     height: 58,
                                     width: 58,
                                   ),
@@ -589,7 +589,7 @@ class BookingDetailsView extends StatelessWidget {
                                         CrossAxisAlignment.center,
                                     children: [
                                       SvgPicture.asset(
-                                          "assets/icon/ic_multi_person.svg"),
+                                          "assets/icons/ic_multi_person.svg"),
                                       const SizedBox(width: 6),
                                       Text(
                                         controller.bookingModel.value
@@ -698,7 +698,7 @@ class BookingDetailsView extends StatelessWidget {
                                                 ));
                                           },
                                           child: SvgPicture.asset(
-                                              "assets/icon/ic_message.svg")),
+                                              "assets/icons/ic_message.svg")),
                                       const SizedBox(width: 12),
                                       InkWell(
                                           onTap: () {
@@ -706,7 +706,7 @@ class BookingDetailsView extends StatelessWidget {
                                                 "${customerModel.countryCode}${customerModel.phoneNumber}");
                                           },
                                           child: SvgPicture.asset(
-                                              "assets/icon/ic_phone.svg"))
+                                              "assets/icons/ic_phone.svg"))
                                     ],
                                   ),
                                 ),
@@ -747,7 +747,7 @@ class BookingDetailsView extends StatelessWidget {
                             Row(
                               children: [
                                 SvgPicture.asset(
-                                  "assets/icon/ic_calendar.svg",
+                                  "assets/icons/ic_calendar.svg",
                                   width: 20,
                                   height: 20,
                                   colorFilter: ColorFilter.mode(
@@ -795,7 +795,7 @@ class BookingDetailsView extends StatelessWidget {
                             Row(
                               children: [
                                 SvgPicture.asset(
-                                  "assets/icon/ic_time.svg",
+                                  "assets/icons/ic_time.svg",
                                   width: 20,
                                   height: 20,
                                   colorFilter: ColorFilter.mode(
@@ -843,7 +843,7 @@ class BookingDetailsView extends StatelessWidget {
                             Row(
                               children: [
                                 SvgPicture.asset(
-                                  "assets/icon/ic_distance.svg",
+                                  "assets/icons/ic_distance.svg",
                                   width: 20,
                                   height: 20,
                                   colorFilter: ColorFilter.mode(
@@ -1013,7 +1013,7 @@ class BookingDetailsView extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            SvgPicture.asset("assets/icon/ic_cash.svg"),
+                            SvgPicture.asset("assets/icons/ic_cash.svg"),
                             const SizedBox(width: 12),
                             Expanded(
                               child: Text(
