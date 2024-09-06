@@ -1,48 +1,92 @@
 {
   "project_info": {
-    "project_number": "394465491097",
-    "project_id": "metroberry-cbbd8",
-    "storage_bucket": "metroberry-cbbd8.appspot.com"
+    "project_number": "107316073750",
+    "project_id": "metrotaxi-782a6",
+    "storage_bucket": "metrotaxi-782a6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:394465491097:android:6fdb52b7bcacbff8e1a008",
+        "mobilesdk_app_id": "1:107316073750:android:a89ecc54e558ddf908ac37",
         "android_client_info": {
-          "package_name": "com.driver.app"
+          "package_name": "com.customer.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "394465491097-5gkt7agea88d12t83d53v8ki3liilqhq.apps.googleusercontent.com",
+          "client_id": "107316073750-nqiaaoqqqnd2k4q95csr5jrf3v70fo2r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.driver.app",
-            "certificate_hash": "b89366510a92e9e8c35203059a0a7438a37c7588"
+            "package_name": "com.customer.app",
+            "certificate_hash": "eab2910b18d643ef76b2d41b19d3a2ea095f0d3f"
           }
         },
         {
-          "client_id": "394465491097-9bspee6u15q7u34vn943u3pd4nfjpvlr.apps.googleusercontent.com",
+          "client_id": "107316073750-jcmk5o0emooqer7o3ke3pgcm2jb34a0u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrHaw5OtXLfChnPf8A6QHFbPyp76WjtYo"
+          "current_key": "AIzaSyBIXlDAva_RnlC5kiTPfh99o_vOJkWbnEM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "394465491097-9bspee6u15q7u34vn943u3pd4nfjpvlr.apps.googleusercontent.com",
+              "client_id": "107316073750-jcmk5o0emooqer7o3ke3pgcm2jb34a0u.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "394465491097-j6a5kuee0ssclh3kn8deg1phpjv9lr2c.apps.googleusercontent.com",
+              "client_id": "107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.driver.app"
+                "bundle_id": "com.mytaxi.customers"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107316073750:android:443d290cb7a756ed08ac37",
+        "android_client_info": {
+          "package_name": "com.driver.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107316073750-fnou107ufc1v6vambv9b6khu5fbdub4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.driver.app",
+            "certificate_hash": "eab2910b18d643ef76b2d41b19d3a2ea095f0d3f"
+          }
+        },
+        {
+          "client_id": "107316073750-jcmk5o0emooqer7o3ke3pgcm2jb34a0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIXlDAva_RnlC5kiTPfh99o_vOJkWbnEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107316073750-jcmk5o0emooqer7o3ke3pgcm2jb34a0u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "107316073750-3oa36g6qf8m2o00vda1csp84tp40u5n3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mytaxi.customers"
               }
             }
           ]

@@ -41,21 +41,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDrHaw5OtXLfChnPf8A6QHFbPyp76WjtYo',
-    appId: '1:394465491097:android:6fdb52b7bcacbff8e1a008',
-    messagingSenderId: '394465491097',
-    projectId: 'metroberry-cbbd8',
-    storageBucket: 'metroberry-cbbd8.appspot.com',
+    apiKey: 'AIzaSyBIXlDAva_RnlC5kiTPfh99o_vOJkWbnEM',
+    appId: '1:107316073750:android:443d290cb7a756ed08ac37',
+    messagingSenderId: '107316073750',
+    projectId: 'metrotaxi-782a6',
+    storageBucket: 'metrotaxi-782a6.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCCVu12VO7_NBTkyVdnE14r381kHDzYZKI',
-    appId: '1:394465491097:ios:848d3a584628c005e1a008',
-    messagingSenderId: '394465491097',
-    projectId: 'metroberry-cbbd8',
-    storageBucket: 'metroberry-cbbd8.appspot.com',
-    androidClientId: '394465491097-5gkt7agea88d12t83d53v8ki3liilqhq.apps.googleusercontent.com',
-    iosClientId: '394465491097-j6a5kuee0ssclh3kn8deg1phpjv9lr2c.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDvMCKDNnORaG3lfyhF0l04KI3MmyAqLHg',
+    appId: '1:107316073750:ios:b14b167ea23f480708ac37',
+    messagingSenderId: '107316073750',
+    projectId: 'metrotaxi-782a6',
+    storageBucket: 'metrotaxi-782a6.appspot.com',
+    androidClientId: '107316073750-fnou107ufc1v6vambv9b6khu5fbdub4e.apps.googleusercontent.com',
+    iosClientId: '107316073750-uors894h561o0mbt46373bip07l653j5.apps.googleusercontent.com',
     iosBundleId: 'com.driver.app',
   );
 

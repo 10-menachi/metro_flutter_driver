@@ -21,9 +21,8 @@ class CurrencyModel {
       this.id});
 
   CurrencyModel.fromJson(Map<String, dynamic> json) {
-    print("CREATED AT: $json['createdAt']");
-    createdAt = Timestamp(
-        json['createdAt']['_seconds'], json['createdAt']['_nanoseconds']);
+    createdAt = Timestamp(json['createdAt']['value']['_seconds'],
+        json['createdAt']['value']['_nanoseconds']);
     symbol = json['symbol'];
     code = json['code'];
     active = json['active'];
